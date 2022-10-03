@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09cc7230-e488-4b2a-9026-6941fb2acaab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gluegen_rt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSCI391.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/kdTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vertex3DManipulation.java" afterDir="false" />
+    <list default="true" id="09cc7230-e488-4b2a-9026-6941fb2acaab" name="Changes" comment="Initial Commit, check README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kdTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kdTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +47,17 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15527344",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "fileTemplates"
   }
 }]]></component>
   <component name="RunManager" selected="Application.kdTree">
+    <configuration name="jdunnTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jdunnTree" />
+      <module name="CSCI391" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="kdTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kdTree" />
       <module name="CSCI391" />
@@ -77,6 +75,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.kdTree" />
+        <item itemvalue="Application.jdunnTree" />
         <item itemvalue="Application.vertex3DManipulation" />
       </list>
     </recent_temporary>
@@ -90,6 +89,14 @@
       <option name="presentableId" value="Default" />
       <updated>1663538622535</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit, check README.md">
+      <created>1664174097163</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664174097163</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +109,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit, check README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit, check README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

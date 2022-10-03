@@ -5,3 +5,7 @@ Progress Report:
 
 ## 9/26/2022 
 Created the repo, made small experiments with Processing library for java. Created a basic class for a binary tree to use.
+
+## 10/2/2022
+
+Fixed error in the insertion of nodes into the 2-Dimensional Tree. Added javadoc and moveRoot.
