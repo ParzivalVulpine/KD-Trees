@@ -1,20 +1,24 @@
-/*
-* TODO: Review what java library does not let IntelliJ run 3D.
-* */
-
 import processing.core.PApplet;
 
+/**
+ * @author Daniel Gaitan
+ * @version 1.1
+ * @since 1.0
+ * <p>
+ *
+ * Summer sketch, it was made to experiment with processing. It creates a 3D cube with its vertices moving around.
+ */
 public class vertex3DManipulation extends PApplet {
-    class CustomBoxx{
+    class VBox {
         int size;
         int[][] vectors = new int[8][];
         int[][] saved = new int[8][];
         float[][] move = new float[8][];
-        double sizeLimitOutliar;
+        double sizeLimitOutlier;
         int randomFactor;
-        CustomBoxx(int x){
+        VBox(int x){
             size = x;
-            sizeLimitOutliar = x*0.15;
+            sizeLimitOutlier = x*0.15;
             randomFactor = 3;
             vectors[0] = new int[] {-size/2, -size/2, -size/2};
             vectors[1] = new int[] {size/2, -size/2, -size/2};
@@ -69,28 +73,28 @@ public class vertex3DManipulation extends PApplet {
         void elevatedBox(){
 
             for (int currentVertex = 0; currentVertex < 8; ++currentVertex) {
-                if (vectors[currentVertex][0] + move[currentVertex][0] < saved[currentVertex][0] + sizeLimitOutliar &&
-                        vectors[currentVertex][0] + move[currentVertex][0] > saved[currentVertex][0] - sizeLimitOutliar) {
+                if (vectors[currentVertex][0] + move[currentVertex][0] < saved[currentVertex][0] + sizeLimitOutlier &&
+                        vectors[currentVertex][0] + move[currentVertex][0] > saved[currentVertex][0] - sizeLimitOutlier) {
                     vectors[currentVertex][0] += move[currentVertex][0];
                 }
-                if(vectors[currentVertex][0] + move[currentVertex][0] + 1 >= saved[currentVertex][0] + sizeLimitOutliar ||
-                        vectors[currentVertex][0] + move[currentVertex][0] - 1 <= saved[currentVertex][0] - sizeLimitOutliar) {
+                if(vectors[currentVertex][0] + move[currentVertex][0] + 1 >= saved[currentVertex][0] + sizeLimitOutlier ||
+                        vectors[currentVertex][0] + move[currentVertex][0] - 1 <= saved[currentVertex][0] - sizeLimitOutlier) {
                     move[currentVertex][0] *= random((float) -1.2, (float) -0.8);
                 }
-                if (vectors[currentVertex][1] + move[currentVertex][1] < saved[currentVertex][1] + sizeLimitOutliar &&
-                        vectors[currentVertex][1] + move[currentVertex][1] > saved[currentVertex][1] - sizeLimitOutliar) {
+                if (vectors[currentVertex][1] + move[currentVertex][1] < saved[currentVertex][1] + sizeLimitOutlier &&
+                        vectors[currentVertex][1] + move[currentVertex][1] > saved[currentVertex][1] - sizeLimitOutlier) {
                     vectors[currentVertex][1] += move[currentVertex][1];
                 }
-                if(vectors[currentVertex][1] + move[currentVertex][1] + 1 >= saved[currentVertex][1] + sizeLimitOutliar ||
-                        vectors[currentVertex][1] + move[currentVertex][1] - 1 <= saved[currentVertex][1] - sizeLimitOutliar){
+                if(vectors[currentVertex][1] + move[currentVertex][1] + 1 >= saved[currentVertex][1] + sizeLimitOutlier ||
+                        vectors[currentVertex][1] + move[currentVertex][1] - 1 <= saved[currentVertex][1] - sizeLimitOutlier){
                     move[currentVertex][1] *= random((float) -1.2, (float) -0.8);
                 }
-                if (vectors[currentVertex][2] + move[currentVertex][2] < saved[currentVertex][2] + sizeLimitOutliar &&
-                        vectors[currentVertex][2] + move[currentVertex][2] > saved[currentVertex][2] - sizeLimitOutliar) {
+                if (vectors[currentVertex][2] + move[currentVertex][2] < saved[currentVertex][2] + sizeLimitOutlier &&
+                        vectors[currentVertex][2] + move[currentVertex][2] > saved[currentVertex][2] - sizeLimitOutlier) {
                     vectors[currentVertex][2] += move[currentVertex][2];
                 }
-                if(vectors[currentVertex][2] + move[currentVertex][2] + 1 >= saved[currentVertex][2] + sizeLimitOutliar ||
-                        vectors[currentVertex][2] + move[currentVertex][2] - 1 <= saved[currentVertex][2] - sizeLimitOutliar){
+                if(vectors[currentVertex][2] + move[currentVertex][2] + 1 >= saved[currentVertex][2] + sizeLimitOutlier ||
+                        vectors[currentVertex][2] + move[currentVertex][2] - 1 <= saved[currentVertex][2] - sizeLimitOutlier){
                     move[currentVertex][2] *= random((float) -1.2, (float) -0.8);
                 }
             }
@@ -116,13 +120,12 @@ public class vertex3DManipulation extends PApplet {
             endShape();
         }
     }
-    CustomBoxx custom = new CustomBoxx(500);
+    VBox custom = new VBox(500);
     int rotation = 0;
     public void settings(){
         size(1000, 1000, P3D);
     }
 
-    @Override
     public void draw() {
         strokeWeight(5);
         background(255);

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="gluegen-rt">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/processing-4.0b7-windows-x64/processing-4.0b7/core/library/gluegen-rt.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
