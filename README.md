@@ -9,3 +9,7 @@ Created the repo, made small experiments with Processing library for java. Creat
 ## 10/2/2022
 
 Fixed error in the insertion of nodes into the 2-Dimensional Tree. Added javadoc and moveRoot.
+
+## 10/6/2022
+
+Added a second sketch animation where all the nodes move and a previous sketch where I first explored processing. Cleaned the javadoc.
