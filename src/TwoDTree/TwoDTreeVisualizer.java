@@ -1,7 +1,10 @@
 package TwoDTree;
 
+import TwoDTree.treeElements.Point;
+import TwoDTree.treeElements.TwoDNode;
+import TwoDTree.treeElements.TwoDTree;
 import processing.core.PApplet;
-import TwoDTree.treeElements.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
