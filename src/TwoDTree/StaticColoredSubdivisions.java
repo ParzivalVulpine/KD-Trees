@@ -25,7 +25,7 @@ public class StaticColoredSubdivisions extends PApplet {
     /**
      * Number of points to be generated for visualizing.
      */
-    int numberOfPoints = 100;
+    int numberOfPoints = 1000;
 
     /**
      * Limit of where the points can position from the bounds of the screen.

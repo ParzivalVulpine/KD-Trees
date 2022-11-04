@@ -5,7 +5,6 @@ package TwoDTree.treeElements;
  * @version 1.0
  * @since 1.0
  * <p>
- * TODO:Decide if the animated colored tree should store colors in the node or in a list in the sketch code.
  * KD Tree Node class, serves as a container for the node location and holds pointers for the parent and children
  * nodes.
  */

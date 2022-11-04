@@ -33,7 +33,7 @@ public class TwoDTreeVisualizer extends PApplet {
     /**
      * Number of points to be generated for visualizing.
      */
-    int numberOfPoints = 15;
+    int numberOfPoints = 100;
 
     /**
      * Limit of where the points can position from the bounds of the screen.
