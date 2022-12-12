@@ -8,6 +8,13 @@ import processing.core.PApplet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Daniel Gaitan
+ * @version 1.1
+ * @since 1.1
+ * <p>
+ * This sketch draws a two-dimensional tree in fullscreen. All the node subdivisions will be colored randomly.
+ */
 public class StaticColoredSubdivisions extends PApplet {
 
 
@@ -36,14 +43,15 @@ public class StaticColoredSubdivisions extends PApplet {
      * Function picks a random color for fill and draws a rectangle with the coordinates of the child canvases of the
      * current node. It uses preorder traversal to make sure, the lower nodes are drawn last and not covered by bigger
      * rectangles from the parent nodes.
-      * @param node tree node to use as the starting point for the traversal and drawing of the canvases.
+     *
+     * @param node tree node to use as the starting point for the traversal and drawing of the canvases.
      */
     public void drawTreeShapes(TwoDNode node) {
         if (node != null) {
             fill(random(255), random(255), random(255));
-            rect(node.childCanvasLeft[0],node.childCanvasLeft[1],node.childCanvasLeft[2],node.childCanvasLeft[3]);
+            rect(node.childCanvasLeft[0], node.childCanvasLeft[1], node.childCanvasLeft[2], node.childCanvasLeft[3]);
             fill(random(255), random(255), random(255));
-            rect(node.childCanvasRight[0],node.childCanvasRight[1],node.childCanvasRight[2],node.childCanvasRight[3]);
+            rect(node.childCanvasRight[0], node.childCanvasRight[1], node.childCanvasRight[2], node.childCanvasRight[3]);
             drawTreeShapes(node.leftChild);
             drawTreeShapes(node.rightChild);
         }
@@ -74,8 +82,7 @@ public class StaticColoredSubdivisions extends PApplet {
      * Settings holds how the program will display.
      */
     public void settings() {
-        fullScreen(P2D,SPAN);
-
+        fullScreen(P2D, SPAN);
     }
 
     /**
@@ -87,8 +94,8 @@ public class StaticColoredSubdivisions extends PApplet {
         rectMode(CORNERS);
 
         for (int i = 0; i < numberOfPoints; i++) {
-            treePoints.add(new Point((int) random(drawingBoundOffset, width-drawingBoundOffset),
-                    (int) random(drawingBoundOffset, height-drawingBoundOffset)));
+            treePoints.add(new Point((int) random(drawingBoundOffset, width - drawingBoundOffset),
+                    (int) random(drawingBoundOffset, height - drawingBoundOffset)));
         }
 
 

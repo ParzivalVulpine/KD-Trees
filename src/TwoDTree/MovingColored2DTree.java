@@ -40,11 +40,11 @@ public class MovingColored2DTree extends PApplet {
 
     //Coloring selection
 
-    int[] colorPalette_1 = {0xffca054d,0xff3b1c32,0xffa4d4b4,0xffffcf9c,
-                            0xffb96d40, 0xFFF9564F, 0xffF9564F, 0xffFF6B6B};
+    int[] colorPalette_1 = {0xffca054d, 0xff3b1c32, 0xffa4d4b4, 0xffffcf9c,
+            0xffb96d40, 0xFFF9564F, 0xffF9564F, 0xffFF6B6B};
 
     int[] colorPalette_2 = {0xFF009FB7, 0xFF53FF45, 0xFFFFD766, 0xFFFF6201, 0xFFFE5E41, 0xFFFF6685, 0xFFF61067,
-                            0xFF071E22, 0xFF0D1B1E, 0xFF0C1618};
+            0xFF071E22, 0xFF0D1B1E, 0xFF0C1618};
 
     int[] colorPalette_3 = {0xFFF72585, 0xFF7209B7, 0xFF3A0CA3, 0xFF4361EE, 0xFF4CC9F0};
 
@@ -81,14 +81,15 @@ public class MovingColored2DTree extends PApplet {
      * Function picks a color from the color selection for fill and draws a rectangle with the coordinates of the child
      * canvases of the current node. It uses preorder traversal to make sure, the lower nodes are drawn last and not
      * covered by bigger rectangles from the parent nodes.
+     *
      * @param node tree node to use as the starting point for the traversal and drawing of the canvases.
      */
     public void drawTreeShapes(TwoDNode node) {
         if (node != null) {
             int colorLevel = node.level % colorSelection.length;
             fill(colorSelection[colorLevel], 255);
-            rect(node.childCanvasLeft[0],node.childCanvasLeft[1],node.childCanvasLeft[2],node.childCanvasLeft[3]);
-            rect(node.childCanvasRight[0],node.childCanvasRight[1],node.childCanvasRight[2],node.childCanvasRight[3]);
+            rect(node.childCanvasLeft[0], node.childCanvasLeft[1], node.childCanvasLeft[2], node.childCanvasLeft[3]);
+            rect(node.childCanvasRight[0], node.childCanvasRight[1], node.childCanvasRight[2], node.childCanvasRight[3]);
             drawTreeShapes(node.leftChild);
             drawTreeShapes(node.rightChild);
         }
@@ -97,17 +98,19 @@ public class MovingColored2DTree extends PApplet {
     /**
      * Settings holds how the program will display.
      */
-    public void settings(){fullScreen(P2D, SPAN);}
+    public void settings() {
+        fullScreen(P2D, SPAN);
+    }
 
     /**
      * Defines the frame rate and generate the points in random locations inside the screen and the movement vector for
      * each point.
      */
-    public void setup(){
+    public void setup() {
         rectMode(CORNERS);
         frameRate(frameRate);
         for (int i = 0; i < numberOfPoints + 1; i++) {
-            if (i < numberOfPoints){
+            if (i < numberOfPoints) {
                 treePoints.add(new Point((int) random(drawingBoundOffset, width - drawingBoundOffset),
                         (int) random(drawingBoundOffset, height - drawingBoundOffset)));
 
@@ -121,7 +124,7 @@ public class MovingColored2DTree extends PApplet {
      * For every frame draw() will change the coordinates of each point in the list based on its respective movement
      * vector and will regenerate the tree to draw it.
      */
-    public void draw(){
+    public void draw() {
         int[] canvas = {0, 0, width, height};
         strokeWeight(2);
         background(255);
@@ -138,12 +141,6 @@ public class MovingColored2DTree extends PApplet {
         }
         drawTreeShapes(test.root);
         drawTree(test.root);
-        /*if(frameCount < 1000){
-            saveFrame("moving-#####.png");
-        }
-        if(frameCount > 1000){
-            exit();
-        }*/
     }
 
 

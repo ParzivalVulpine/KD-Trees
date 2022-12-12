@@ -12,7 +12,7 @@ import java.util.List;
  * @author Daniel Gaitan
  * @version 1.1
  * @since 1.0
- *
+ * <p>
  * First sketch, it visualizes a two-dimensional tree in fullscreen. The root node of the tree will follow the mouse and
  * the sketch subdivisions will react accordingly.
  */
@@ -73,7 +73,7 @@ public class TwoDTreeVisualizer extends PApplet {
      * Settings holds how the program will display.
      */
     public void settings() {
-        fullScreen(P2D,SPAN);
+        fullScreen(P2D, SPAN);
     }
 
     /**
@@ -83,11 +83,9 @@ public class TwoDTreeVisualizer extends PApplet {
         frameRate(frameRate);
 
         for (int i = 0; i < numberOfPoints; i++) {
-            treePoints.add(new Point((int) random(drawingBoundOffset, width-drawingBoundOffset),
-                                     (int) random(drawingBoundOffset, height-drawingBoundOffset)));
+            treePoints.add(new Point((int) random(drawingBoundOffset, width - drawingBoundOffset),
+                    (int) random(drawingBoundOffset, height - drawingBoundOffset)));
         }
-
-
     }
 
     /**

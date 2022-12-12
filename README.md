@@ -19,3 +19,9 @@ Added a second sketch animation where all the nodes move and a previous sketch w
 ## 10/18/2022
 Created a sketch with color for a KD Tree where all the points are static. Added link to Notion for notes about the 
 research.
+
+## 11/2/2022
+Created an animated sketch with colors for a 2D tree.
+
+## 12/12/2022
+Cleaned up documentation, left base template for 3D tree.

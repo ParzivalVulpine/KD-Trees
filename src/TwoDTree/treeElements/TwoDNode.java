@@ -115,4 +115,8 @@ public class TwoDNode {
     public int getY() {
         return coordinates.getY();
     }
+
+    public int getLevel() {
+        return level;
+    }
 }
